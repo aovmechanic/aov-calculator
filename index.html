@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Use the AOV Calculator below to work out your average order value. ">
+    <meta name="keywords" content="AOV, Average Order Value, Revenue Calculator, E-commerce, Online Sales">
+    <meta name="author" content="The AOV Mechanic™">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://codepen.io/aovmechanic/pen/xxMRebx">
+    <meta property="og:title" content="AOV Calculator - Unleash Your Store's Potential">
+    <meta property="og:description" content="Optimize your store's performance with our AOV Calculator. Calculate your current AOV and see potential revenue increases with desired AOV improvements.">
+    <meta property="og:image" content="YourOGImageURL"> <!-- Replace with actual image URL -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://codepen.io/aovmechanic/pen/xxMRebx">
+    <meta property="twitter:title" content="AOV Calculator - Unleash Your Store's Potential">
+    <meta property="twitter:description" content="Optimize your store's performance with our AOV Calculator. Calculate your current AOV and see potential revenue increases with desired AOV improvements.">
+    <meta property="twitter:image" content="YourTwitterImageURL"> <!-- Replace with actual image URL -->
+
+    <title>AOV Calculator - Calculate Your Average Order Value</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="header">
+        <h1>AOV Calculator</h1>
+        <p>
+           What is AOV? Average order value (AOV) is a key metric in  ecommerce analytics that reflects the average amount spent each time a customer places an order over a defined period of time. </p><p>To calculate AOV, we divide the total revenue by number of orders taken:</p><p> <strong> Total Revenue ÷ Number of Orders = AOV.</strong>
+      </p><p>To get started with the AOV Calculator, simply enter the start and end dates for the period you want to analyze. Then, input your total revenue and the total number of orders received during that period. Once you have filled in this information, press the "Calculate Your AOV" button to see your average order value.</p>
+
+    </header>
+
+    <main class="main-content">
+        <section id="calculator">
+            <div class="calculator-step" id="current-aov-section">
+                
+                <div class="input-group">
+                    <input type="date" id="startDate" required>
+                    <input type="date" id="endDate" required>
+                    <input type="number" id="totalRevenue" placeholder="Total Revenue" min="0" required>
+                    <input type="number" id="numberOfOrders" placeholder="Number of Orders" min="0" required>
+                    <button id="calculate-aov-btn">Calculate Your  AOV</button>
+                </div>
+                <div class="output-group hidden" id="current-aov-output"></div>
+            </div>
+
+            <div class="calculator-step" id="target-aov-section" style="display:none;">
+                <h2>Desired AOV % Increase</h2>
+                <div class="input-group">
+                    <input type="number" id="desiredIncrease" placeholder="Desired AOV Increase (%)" min="0" required>
+                    <button id="calculate-revenue-impact-btn">Show Revenue Impact</button>
+                </div>
+                <div class="output-group" id="revenue-impact-output"></div>
+            </div>
+
+            <div class="chart-container" id="revenue-chart-container" style="display:none;">
+                <canvas id="revenue-chart"></canvas>
+            </div>
+        </section>
+  </main><p>Created by <a href="https://aovmechanic.com" title="The AOV Mechanic™ - AOV Optimization Services">The AOV Mechanic™</a> -  Schedule A Free Tune-up</p>
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
